@@ -1,0 +1,35 @@
+package model.dao.implementacao;
+
+import java.util.List;
+
+import model.dao.VendedorDao;
+import model.entities.Vendedor;
+
+public class VendedorDaoJDBC implements VendedorDao {
+
+	@Override
+	public void insert(Vendedor obj) {
+
+	}
+
+	@Override
+	public void update(Vendedor obj) {
+
+	}
+
+	@Override
+	public void deleteById(Vendedor obj) {
+	
+	}
+
+	@Override
+	public Vendedor findById(Integer id) {
+		return null;
+	}
+
+	@Override
+	public List<Vendedor> findAll() {
+		return null;
+	}
+
+}
