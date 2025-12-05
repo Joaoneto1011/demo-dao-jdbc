@@ -2,6 +2,7 @@ package aplicacao;
 
 import java.util.Date;
 import java.util.List;
+import java.util.Scanner;
 
 import model.dao.FabricaDao;
 import model.dao.VendedorDao;
@@ -11,6 +12,8 @@ import model.entities.Vendedor;
 public class ProgramaPrincipal {
 	
 	public static void main(String[] args) {
+		
+		Scanner sc = new Scanner(System.in);
 		
 		VendedorDao vendedorDao = FabricaDao.createVendedorDao();
 		
@@ -50,6 +53,15 @@ public class ProgramaPrincipal {
 		vendedor.setSalarioBase(3000.0);
 		vendedorDao.update(vendedor);
 		System.out.println("Update Completo");
+		
+		System.out.println("\n=== TESTE 6: vendedor DELETE ===");
+		
+		System.out.println("Entre com id para excluir o teste: ");
+		int id = sc.nextInt();
+		vendedorDao.deleteById(id);
+		System.out.println("Delete completo");
+		
+		sc.close();
 	}
 	
 }
