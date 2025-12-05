@@ -41,7 +41,15 @@ public class ProgramaPrincipal {
 		
 		Vendedor novoVendedor = new Vendedor(null, "Greg", "greg@gmail.com", new Date(), 4000.0, departamento);
 		vendedorDao.insert(novoVendedor);
-		System.out.println("Inserted! New id = " + novoVendedor.getId());
+		System.out.println("Inserted! Novo id = " + novoVendedor.getId());
+		
+		System.out.println("\n=== TESTE 5: vendedor UPDATE ===");
+		
+		vendedor = vendedorDao.findById(1);
+		vendedor.setNome("Joao Neto");
+		vendedor.setSalarioBase(3000.0);
+		vendedorDao.update(vendedor);
+		System.out.println("Update Completo");
 	}
 	
 }
