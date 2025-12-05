@@ -26,6 +26,16 @@ public class ProgramaPrincipal {
 			
 			System.out.println(obj);
 		}
+		
+	    System.out.println("\n=== TESTE 3: vendedor findAll ===");
+		
+		list = vendedorDao.findAll();
+		
+		for (Vendedor obj : list) {
+			
+			System.out.println(obj);
+		}
 	}
-
+	
 }
+
