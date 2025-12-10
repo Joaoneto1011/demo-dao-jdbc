@@ -17,3 +17,4 @@ public interface VendedorDao {
 	List<Vendedor> findByDepartamento(Departamento departamento);
 
 }
+
